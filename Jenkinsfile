@@ -34,8 +34,11 @@ pipeline {
           sshagent(['TomcatUserID']) {
             scp  -o StrictHostKeyChecking=no webapp/target/webapp.war ec2_user@18.212.169.223:/opt/tomcat/webapp
      
+            }
           }
         }
       }
     }
   }
+}
+
