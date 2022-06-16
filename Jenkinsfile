@@ -28,13 +28,6 @@ pipeline {
         }
       }
     }
-    stage('Deploy on Tomcat') {
-      steps {
-          sshagent(['TomcatUserID']) {
-            sh "scp   webapp/target/webapp.war ec2_user@18.212.169.223:/opt/tomcat/webapp"
-         }
-       }
-     }
    }
 }
 
